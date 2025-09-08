@@ -1,0 +1,53 @@
+
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+git config --global init.defaultBranch main # ensure use main not master
+git config --list
+
+# new git
+git init               # start a repo in current folder
+git clone URL          # copy a repo from GitHub
+
+# identify status
+git status.       # check status
+git log --oneline # see history
+
+
+# stage
+## add
+git add filename       # add one file
+git add .              # add everything
+
+# commits
+## add commit
+git commit -m "Message describing what you did"
+
+# branching
+git branch # local branches
+git branch -a # remote branches
+git checkout -b feature1   # create + switch to feature1
+git checkout main          # go back to main
+git switch feature1 # modern alternatives
+git branch new-feature      # create a branch
+git checkout new-feature    # switch to branch
+git switch new-feature      # alternative modern command
+git merge new-feature       # merge branch into main
+
+# undo
+git restore filename        # discard changes in file
+git reset --soft HEAD~1     # undo last commit (keep changes)
+git reset --hard HEAD~1     # undo last commit and changes
+
+# github
+git remote add origin git@github.com:username/repo.git
+git push -u origin main
+git push
+git pull
+
+# merge
+
+
+git merge -X ours main # •	-X ours = when there’s a conflict, favor the current branch (feature).
+
+
+
